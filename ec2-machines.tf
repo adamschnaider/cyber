@@ -22,7 +22,7 @@ resource "aws_instance" "serv2" {
   }
  # user_data = "${data.template.user_data.rendered}"
   provisioner "local-exec" {
-    command = "sleep 200 && ping -c 10 $FOO >> env_vars.txt 2>&1"
+    command = "sleep 500 && ping -c 10 $FOO >> env_vars.txt 2>&1"
 
     environment {
       FOO = "${aws_instance.serv2.private_ip}"
