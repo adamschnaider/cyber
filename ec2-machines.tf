@@ -20,7 +20,6 @@ resource "aws_instance" "serv2" {
   tags {
         Name = "serv2"
   }
- # user_data = "${data.template.user_data.rendered}"
   provisioner "local-exec" {
     command = "sleep 500 && ping -c 10 $FOO >> env_vars.txt 2>&1"
 
