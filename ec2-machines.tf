@@ -8,9 +8,6 @@ resource "aws_instance" "serv2" {
   tags {
         Name = "serv2"
   }
-#  provisioner "local-exec" {
-#    command = "sleep 200 && ping -c 10 ${aws_instance.serv1.private_ip} > env_vars.txt"
-#  }
 }
 resource "aws_instance" "serv1" {
   ami           = "${lookup(var.AmiLinux, var.region)}"
