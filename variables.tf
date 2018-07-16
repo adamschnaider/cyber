@@ -49,3 +49,8 @@ variable "DnsZoneName" {
   default = "cybereason.terraform.internal"
   description = "the internal dns name"
 }
+
+variable "key-path" {
+  default = "/home/ec2-user/ELKstack.pem"
+  description = "Key location for remote-exec"
+}
